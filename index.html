@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>聖誕交換禮物抽獎工具 Christmas Gift Exchange Tool</title>
+    <meta name="description" content="免費線上｜聖誕｜交換禮物｜抽獎工具｜Free Online | Christmas | Gift Exchange | Drawing Tool" />
+    <link rel="canonical" href="https://christmas.schooldays.xyz" />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      This page replicates a simple Secret‑Santa style gift drawing tool.  
+      Users enter the number of participants, then click the red start button.  
+      A random order of gift numbers is generated and displayed one at a time.  
+      After all numbers have been drawn the list of results can be reviewed or the drawing can be restarted.
+    -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon and apple‑touch icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <link rel="apple-touch-icon" href="logo192.png" />
+</head>
+<body>
+    <noscript>您需要啟用 JavaScript 才能使用本工具。</noscript>
+    <!-- Language toggle button: click to switch between Traditional Chinese and English -->
+    <button id="langToggle" class="lang-toggle" aria-label="切換語言">🌐</button>
+    <div class="container">
+        <h1 class="title">聖誕交換禮物</h1>
+        <p class="subtitle">為禮物標上號碼，然後輸入參與人數</p>
+
+        <!-- Form for entering number of participants -->
+        <div id="setup" class="setup">
+            <label for="count" class="visually-hidden">參與人數</label>
+            <input id="count" type="number" min="1" placeholder="參與人數 *" />
+            <button id="startButton" class="btn btn-primary">開始</button>
+        </div>
+
+        <!-- Section for drawing gifts -->
+        <div id="drawSection" class="hidden">
+            <p id="drawInfo" class="draw-info"></p>
+            <div id="numberDisplay" class="number-display"></div>
+            <div class="button-row">
+                <button id="drawButton" class="btn btn-primary">抽取禮物</button>
+                <button id="redrawButton" class="btn btn-secondary">重抽一次</button>
+            </div>
+        </div>
+
+        <!-- Section shown when all numbers have been drawn -->
+        <div id="finalSection" class="hidden">
+            <p id="finalInfo" class="draw-info"></p>
+            <div id="finalNumber" class="number-display"></div>
+            <div class="button-row">
+                <button id="restartButton" class="btn btn-primary">重新開始</button>
+                <button id="toggleResults" class="btn btn-secondary">所有結果</button>
+            </div>
+            <div id="resultListContainer" class="result-list hidden">
+                <button id="collapseBtn" class="collapse-btn" aria-label="收合或展開結果列表">▼</button>
+                <ol id="resultList"></ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

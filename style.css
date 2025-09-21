@@ -1,0 +1,182 @@
+/*
+ * Basic styling for the Christmas gift exchange tool.
+ * It uses a simple colour palette and layout to mirror the original site
+ * without any dependencies on external frameworks. All measurements are
+ * relative to ensure good scaling across devices.
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Language toggle icon in the top‑right corner */
+.lang-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10;
+}
+
+.lang-toggle:hover {
+    opacity: 0.7;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 1.5rem;
+}
+
+/* Hide elements until they are needed */
+.hidden {
+    display: none;
+}
+
+/* Input and buttons styling */
+#setup input {
+    width: 200px;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+#setup input:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+.btn-primary {
+    background-color: #d32f2f; /* a red shade */
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #b71c1c;
+}
+
+.btn-secondary {
+    background-color: #1976d2; /* a blue shade */
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #115293;
+}
+
+.button-row {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Display for the drawn number */
+.number-display {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1976d2;
+    margin-top: 1rem;
+}
+
+/* Information text above the number */
+.draw-info {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    color: #333333;
+}
+
+/* Results list styling */
+.result-list {
+    margin-top: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+    padding: 1rem;
+    background-color: #fafafa;
+}
+
+.result-list ol {
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.result-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Collapse button styling */
+.collapse-btn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+/* When the results list is collapsed hide the ordered list and rotate the arrow */
+.collapsed ol {
+    display: none;
+}
+.collapsed .collapse-btn {
+    transform: rotate(-180deg);
+}
+
+/* Utility class for visually hidden labels */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
