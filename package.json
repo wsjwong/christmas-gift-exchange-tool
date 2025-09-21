@@ -1,0 +1,26 @@
+{
+  "name": "christmas-gift-exchange-tool",
+  "version": "1.0.0",
+  "description": "A tiny, dependency‑free Secret‑Santa style gift drawing tool for holiday gatherings. Label the gifts with numbers 1..N, enter the number of participants, and draw gift numbers one by one. The UI supports English and Traditional Chinese (HK), and everything runs entirely in the browser — no server and no data collection.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "screenshot": "node scripts/screenshot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsjwong/christmas-gift-exchange-tool.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/wsjwong/christmas-gift-exchange-tool/issues"
+  },
+  "homepage": "https://github.com/wsjwong/christmas-gift-exchange-tool#readme",
+  "private": "true",
+  "devDependencies": {
+    "puppeteer": "^24.22.0"
+  }
+}

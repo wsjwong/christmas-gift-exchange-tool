@@ -1,5 +1,7 @@
 # Christmas Gift Exchange (Secret Santa) — Fair, Transparent, Open Source
 
+Live demo: https://wsjwong.github.io/christmas-gift-exchange-tool/
+
 A tiny, dependency‑free Secret‑Santa style gift drawing tool for holiday gatherings. Label the gifts with numbers 1..N, enter the number of participants, and draw gift numbers one by one. The UI supports English and Traditional Chinese (HK), and everything runs entirely in the browser — no server and no data collection.
 
 - Fairness: Uses an unbiased Fisher–Yates shuffle for a uniform random order.
@@ -18,6 +20,16 @@ UI and logic live in these files:
 - `index.html` — structure and language toggle button
 - `script.js` — state machine, draw logic, and translations
 - `style.css` — layout and styling
+
+## Screenshots
+
+Desktop
+
+![Desktop screenshot](docs/screenshot-desktop.png)
+
+Mobile
+
+![Mobile screenshot](docs/screenshot-mobile.png)
 
 
 ## Fairness & Openness
@@ -66,6 +78,8 @@ MIT License — see `LICENSE` for details.
 ---
 
 # 聖誕交換禮物（Secret Santa）— 公平、透明、開源（香港繁體）
+
+即時試用（GitHub Pages）：https://wsjwong.github.io/christmas-gift-exchange-tool/
 
 這是一個細小、無相依（dependency‑free）的交換禮物抽籤工具。先把禮物實物貼上 1..N 編號，輸入參加人數，逐個抽出禮物號碼。介面支援英文及香港繁體中文，全部在瀏覽器本機運行 — 無需伺服器、無需登入、亦不會收集任何資料。
 
